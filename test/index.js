@@ -10,7 +10,14 @@ var sudiyi = new Sudiyi({
 
 describe('module', function () {
 
-  it('should be able to create a temporary qrcode', function (done) {
+  it('area', function (done) {
+    sudiyi.area().then(function (data) {
+      console.log(data);
+      done();
+    });
+  });
+
+  it('boxStatus', function (done) {
     sudiyi.boxStatus(1006865).then(function (data) {
       console.log(data);
       done();
